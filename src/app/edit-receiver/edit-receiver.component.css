@@ -1,0 +1,229 @@
+.wu-receiver-container {
+  width: 70%;
+  min-height: 350px;
+  background-color: #fff;
+  margin: 70px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border: 1px solid rgb(223, 222, 222);
+}
+
+.wu-receiver-container>h2 {
+  font-weight: lighter;
+  text-align: left;
+  width: 90%;
+  color: #302f2f;
+  text-transform: capitalize;
+}
+
+.wu-receiver-container>button {
+  width: 90%;
+  border: none;
+  background-color: white;
+  margin-top: 20px;
+  color: #045F86;
+}
+
+.wu-receiver-container>input {
+  /* line-height: 2; */
+  margin-top: 5px;
+  padding: 15px;
+  width: 90%;
+}
+
+.wu-receiver-container>p {
+  font-weight: lighter;
+  color: rgb(91, 91, 90);
+  font-size: 12px;
+  margin-top: 20px;
+  width: 90%;
+  text-align: left;
+}
+
+.wu-receiver-container>form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: nowrap; */
+}
+
+.wu-receiver-personal-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.wu-receiver-personal-info>h5 {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.wu-receiver-personal-info>div {
+  margin-top: 20px;
+  /* line-height: 2; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.wu-receiver-personal-info>div>input {
+  /* line-height: 2; */
+  padding: 15px;
+}
+
+.wu-receiver-personal-info>div:nth-child(2),
+.wu-receiver-personal-info>div:nth-child(3) {
+  width: 45%;
+}
+
+.wu-receiver-personal-info>div:nth-child(4),
+.wu-receiver-personal-info>div:nth-child(5) {
+  width: 100%;
+}
+
+.wu-receiver-container>form>button {
+  margin-top: 20px;
+}
+
+.wu-receiver-container>form>button {
+  margin-top: 20px;
+  background-color: #045F86;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  height: 50px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.wu-receiver-personal-info>div:nth-child(5)>input:first-child {
+  /* line-height: 2; */
+  /* padding: 15px; */
+  width: 10%;
+}
+
+.wu-receiver-personal-info>.country-code {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.country-code {
+  width: 10%;
+}
+
+.country-input {
+  width: 90%;
+}
+
+.phone-input {
+  width: 100%;
+}
+
+.error {
+  color: #045F86;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+
+
+
+
+
+/* .wu-receiver-container {
+    width: 70%;
+    min-height: 350px;
+    background-color: #fff;
+    margin: 70px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:30px;
+    border: 1px solid rgb(223, 222, 222);
+  }
+  .wu-receiver-container>h2{
+      font-weight: lighter;
+      text-align: left;
+      width: 90%;
+      color: #302f2f;
+  }
+  .wu-receiver-container>button {
+    width: 90%;
+    border: none;
+    background-color: white;
+    margin-top: 20px;
+    color: #045F86;
+  }
+  
+  .wu-receiver-container>form>input {
+   
+    margin-top: 5px;
+   padding: 15px;
+  }
+  .wu-receiver-container>form>p{
+      font-weight: lighter;
+      color:rgb(91, 91, 90);
+      font-size: 12px;
+      margin-top: 20px;
+  }
+  
+  .wu-receiver-container>form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+   
+  }
+  
+  .wu-receiver-personal-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  
+  }
+  
+  .wu-receiver-personal-info>h5 {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .wu-receiver-personal-info>input {
+    margin-top: 20px;
+ 
+    padding: 15px;
+    width: 45%;
+  }
+  .wu-receiver-personal-info>input:nth-child(2),.wu-receiver-personal-info>input:nth-child(3) {
+      width: 45%;
+    }
+    .wu-receiver-personal-info>input:nth-child(4),.wu-receiver-personal-info>input:nth-child(5) {
+      width: 100%;
+    }
+  .wu-receiver-container>form>button {
+      margin-top: 20px;
+  }
+  .wu-receiver-container>form>button{
+      margin-top : 20px;
+      background-color:#045F86;
+      color: #fff;
+      padding: 10px;
+      width:100%;
+      border:none;
+      height: 50px;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+   */
+
+
+

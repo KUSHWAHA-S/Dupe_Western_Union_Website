@@ -1,0 +1,20 @@
+<div class="wu-login-container">
+  <form #userLogin="ngForm" (ngSubmit)="onSubmit(userLogin.value)" action="">
+
+    <h2>Log in</h2>
+    <div class="textfield email">
+      <i class="fa-sharp fa-solid fa-envelope" style="color: #cececf"></i>
+      <input required #email="ngModel" placeholder="Email" class="text-input" ngModel name="email" type="email">
+    </div>
+    <div class="error" *ngIf="!email.dirty">*required!</div>
+    <div class="text"><input type="checkbox" /> Remember me</div>
+    <div class="textfield password">
+      <i class="fa-solid fa-lock" style="color: #cececf"></i>
+      <input required #password="ngModel" placeholder="Password" class="text-input" type="password" ngModel name="password">
+    </div>
+    <div class="error" *ngIf="!password.dirty">*required!</div>
+
+    <button [disabled]="!email.dirty && !password.dirty" style="cursor: pointer;" type="submit">Login</button>
+
+  </form>
+</div>

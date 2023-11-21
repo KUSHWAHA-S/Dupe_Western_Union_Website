@@ -1,0 +1,124 @@
+{
+  "countryData": [
+    {
+      "name": "India",
+      "code": 91,
+      "fields": [
+        {
+          "type": "text",
+          "placeHolder": "First Name",
+          "name": "firstName",
+          "value": "",
+          "required": true
+        },
+        {
+          "type": "text",
+          "placeHolder": "Last Name",
+          "name": "lastName",
+          "value": "",
+          "required": true
+        },
+        {
+          "type": "email",
+          "placeHolder": "Email",
+          "name": "email",
+          "value": "",
+          "required": true
+        },
+        {
+          "type": "number",
+          "placeHolder": "Phone Number",
+          "name": "phone",
+          "value": "",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "USA",
+      "code": 1,
+      "fields": [
+        {
+          "type": "text",
+          "placeHolder": "First Name",
+          "name": "firstName",
+          "value": "",
+          "required": true
+        },
+        {
+          "type": "text",
+          "placeHolder": "Last Name",
+          "name": "lastName",
+          "value": "",
+          "required": false
+        },
+        {
+          "type": "email",
+          "placeHolder": "Email",
+          "name": "email",
+          "value": "",
+          "required": false
+        },
+        {
+          "type": "number",
+          "placeHolder": "Phone Number",
+          "name": "phone",
+          "value": "",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "UK",
+      "code": 44,
+      "fields": [
+        {
+          "type": "text",
+          "placeHolder": "First Name",
+          "name": "firstName",
+          "value": "",
+          "required": true
+        },
+        {
+          "type": "text",
+          "placeHolder": "Last Name",
+          "name": "lastName",
+          "value": "",
+          "required": true
+        },
+        {
+          "type": "email",
+          "placeHolder": "Email",
+          "name": "email",
+          "value": "",
+          "required": true
+        },
+        {
+          "type": "number",
+          "placeHolder": "Phone Number",
+          "name": "phone",
+          "value": "",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "receiverData": [
+    {
+      "country": "USA",
+      "firstName": "jhon ",
+      "lastName": "wick",
+      "email": "",
+      "phone": "76980897768",
+      "id": 7
+    },
+    {
+      "country": "India",
+      "firstName": "rani",
+      "lastName": "gupta",
+      "email": "rani@abn.com",
+      "phone": "2454756859",
+      "id": 8
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+header {
+  background-color: #212A33;
+  height: 68px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .wu-header-logo {
+  height: 100%;
+  margin-left: 50px;
+  padding: 7px;
+  justify-content: center;
+  /* padding: 2%; */
+}
+
+.wu-header-logo>img {
+  height: 100%;
+  vertical-align: middle;
+  /* width: 50px; */
+}
+.wu-header-content{
+    display: flex;
+    align-items: center;
+}
+.wu-header-content>li{
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.wu-header-content>li,.wu-header-content>li>a {
+  color: #fff;
+  font-size: 14px;
+}
+.wu-header-content>li:nth-child(5){
+    border-left: 1px solid #777;
+    border-right:1px solid #777;
+    
+}
+

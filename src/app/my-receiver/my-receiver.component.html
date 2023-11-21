@@ -1,0 +1,11 @@
+<div class="wu-myReceiver">
+  <h3>Receivers</h3>
+  <div class="wu-each-myReceiver" *ngFor="let receiver of receiverArray">
+    <p>{{receiver.firstName}} {{receiver.lastName}}</p>
+    <i (click)="deleteReceiver(receiver.id)" class="fa-solid fa-trash"></i>
+    <i (click)="editReceiver(receiver.id)" class="fa-solid fa-pen-to-square"></i>
+    <!-- <button >Edit</button>
+    <button >Delete</button> -->
+  </div>
+  <button (click)="addReceiver()">Add Receiver</button>
+</div>

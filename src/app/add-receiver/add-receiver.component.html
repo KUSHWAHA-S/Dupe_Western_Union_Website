@@ -1,0 +1,32 @@
+<div class="wu-receiver-container">
+  <h2>Receiver's Information</h2>
+  <p>For your safety, make sure you know your receiver</p>
+  <select (input)="change($event)" required [(ngModel)]="text" name="country" id="country">
+    <option hidden selected value="country">Country name</option>
+    <option *ngFor="let country of countryData" [value]="country.name">{{country.name}}</option>
+    <!-- <option value="usa">United States of America</option>
+    <option value="uk">United Kingdom</option> -->
+  </select>
+  <form [formGroup]="dynamicForm" *ngIf="dynamicForm" (ngSubmit)="onSubmit()">
+
+    <div *ngIf="text" class="wu-receiver-personal-info">
+      <h5>Receiver's personal information</h5>
+      <div *ngFor="let field of currentCountryCode.fields">
+        <input class="country-code" *ngIf="field.name=='phone'" disabled type="number" name="phone" [placeholder]="code">
+        <input [type]="field.type" [ngClass]="field.name=='phone'? 'country-input' : 'phone-input'" [formControlName]="field.name" [placeholder]="field.placeHolder">
+        <div class="error" *ngIf="valid && field.required">{{errorMessage(field)}}</div>
+        <div class="error" *ngIf="!field.required">(optional)</div>
+      </div>
+      <!-- 
+      <input ngModel type="text" name="lastName" placeholder="Last Name">
+      <input ngModel type="text" name="email" placeholder="Email">
+      <div class="country-code">
+        <input disabled ngModel type="number" name="phone" [placeholder]="code">
+        <input ngModel type="text" name="phone" placeholder="PhoneNumber"></div> -->
+
+    </div>
+  
+    <button type="submit">Continue</button>
+  </form>
+  <button (click)="onCancel()">Cancel</button>
+</div>
