@@ -21,6 +21,7 @@ header .wu-header-logo {
 .wu-header-content{
     display: flex;
     align-items: center;
+    margin :0;
 }
 .wu-header-content>li{
     padding-left: 15px;

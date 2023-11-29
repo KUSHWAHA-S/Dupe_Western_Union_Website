@@ -11,6 +11,9 @@ import { AddReceiverComponent } from './add-receiver/add-receiver.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EditReceiverComponent } from './edit-receiver/edit-receiver.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SendMoneyComponent } from './send-money/send-money.component';
+
+
 
 @NgModule({
   declarations: [
@@ -20,15 +23,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HeaderComponent,
     AddReceiverComponent,
     EditReceiverComponent,
+    SendMoneyComponent,
   ],
   imports: [
     BrowserModule,
-    NgbModule,
     AppRoutingModule,
     RouterModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [AddReceiverComponent],
   bootstrap: [AppComponent]

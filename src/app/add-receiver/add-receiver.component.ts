@@ -20,6 +20,9 @@ export class AddReceiverComponent implements OnInit {
   currentCountryCode: any;
   code: any
   text: string = null;
+  countryUrl:string;
+  countrySelect: string ;
+  showCountry: boolean = false;
   dynamicForm!: FormGroup;
   formStructure: any;
   valid: boolean = true;
@@ -63,13 +66,45 @@ export class AddReceiverComponent implements OnInit {
 
   }
   change(event: any) {
-    console.log(event.target.value);
+    // console.log(event.target.value);
+    // if (this.currentCountryCode = this.countryData.find((e: any) => {
+    //   return e.name === event.target.value;
+    // }
+    // )) {
+    //   // this.currentCountryCode =obj.code
+    //   this.code = this.currentCountryCode.code
+    //   console.log(this.currentCountryCode);
+
+    //   this.formStructure = this.currentCountryCode.fields;
+    //   // console.log(formStructure);
+    //   let formGroup: { [key: string]: any } = { country: this.currentCountryCode.name };
+    //   this.formStructure.forEach((field: any) => {
+    //     if (field.required) {
+    //       formGroup[field.name] = [field.value || '', [Validators.required]];
+    //     }
+    //     else {
+    //       formGroup[field.name] = [field.value || ''];
+    //     }
+
+    //   });
+    //   this.dynamicForm = this.formBuilder.group(formGroup);
+    // }
+  }
+
+  setShowCountry() {
+    this.showCountry = !this.showCountry;
+  }
+  countryChange(country: string) {
+    this.countrySelect = country;
+    this.showCountry = false;
+    console.log(this.countrySelect);
     if (this.currentCountryCode = this.countryData.find((e: any) => {
-      return e.name === event.target.value;
+      return e.name === country;
     }
     )) {
       // this.currentCountryCode =obj.code
-      this.code = this.currentCountryCode.code
+      this.code = this.currentCountryCode.code;
+      this.countryUrl=this.currentCountryCode.url;
       console.log(this.currentCountryCode);
 
       this.formStructure = this.currentCountryCode.fields;

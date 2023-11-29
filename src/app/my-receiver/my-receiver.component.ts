@@ -13,6 +13,9 @@ import { AddReceiverService } from '../services/receiver.service';
 export class MyReceiverComponent implements OnInit {
 
   receiverArray: Array<Object> = [{ name: "Jhon Doe" }, { name: "Rani" }, { name: "Jack" }];
+  countryData: any;
+  currentCountry: any;
+  newReceiverArray: void;
 
 
   constructor(private http: HttpClient, private auth: AuthService, public route: Router, private receiver: AddReceiverService) {
@@ -20,16 +23,38 @@ export class MyReceiverComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
     this.receiver.getReceiverData().subscribe(
       (res: any) => {
-        // console.log(res);
         this.receiverArray = res;
+        console.log(this.receiverArray);
       },
-      (err:Error)=>{
+      (err: Error) => {
         alert("400 error");
       }
-    )
-    // console.log(this.auth.loggedIn);
+    );
+
+    this.receiver.getCountryData().subscribe(
+      (response: any) => {
+        this.countryData = response;
+        console.log(this.countryData);
+        console.log(this.receiverArray);
+        this.receiverArray.forEach((r:any,index:number)=>{
+          this.currentCountry = this.countryData.find((e: any) => {
+          return e.name === r.country;
+        }
+        );
+        console.log(this.currentCountry);
+        console.log(r);
+        this.receiverArray[index]={url:this.currentCountry.url, ...r};
+        });
+        console.log(this.receiverArray);
+      },
+      (err: Error) => {
+        console.log(err);
+      }
+    );
+
   }
   ngDoCheck(): void {
     // console.log(this.receiverArray);
@@ -45,15 +70,15 @@ export class MyReceiverComponent implements OnInit {
         this.route.navigate(['/myReceiver'])
         // this.receiverArray = res;
       },
-      (err:Error)=>{
+      (err: Error) => {
         alert("unable to delete , facing some problem");
       }
     )
   }
   editReceiver(id: number) {
     // console.log(id);
-    let newId : string =id.toString();
-    this.route.navigate(['/editReceiver'],{ queryParams: { id:newId } });
+    let newId: string = id.toString();
+    this.route.navigate(['/editReceiver'], { queryParams: { id: newId } });
   }
 
 }

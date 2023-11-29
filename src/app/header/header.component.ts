@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
         else{
           this.changeHeaderLogOut=false;
         }
-        if (val.url === '/addReceiver' || val.url === '/myReceiver' || val.url==='/editReceiver') {
+        if (val.url === '/addReceiver' || val.url === '/myReceiver' || val.url==='/editReceiver' || val.url==='/sendMoney') {
           this.changeHeader = true;
           // console.log(val.url);
           // console.log(this.changeHeader);

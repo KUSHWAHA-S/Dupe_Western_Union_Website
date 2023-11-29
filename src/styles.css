@@ -6,11 +6,25 @@
 }
 body{
     font-family: Open Sans Regular,sans-serif;
-    background-color: #efefef;
+    /* background-color: #efefef; */
+    background-color:  #EBECE7 !important;
 }
 a{
     text-decoration: none;
 }
 ul{
     list-style: none;
+}
+html{
+    background-color:  #EBECE7;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

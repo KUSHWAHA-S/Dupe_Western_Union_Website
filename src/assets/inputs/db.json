@@ -3,6 +3,7 @@
     {
       "name": "India",
       "code": 91,
+      "url": "assets/images/india.png",
       "fields": [
         {
           "type": "text",
@@ -37,6 +38,7 @@
     {
       "name": "USA",
       "code": 1,
+      "url": "assets/images/usa.png",
       "fields": [
         {
           "type": "text",
@@ -69,8 +71,44 @@
       ]
     },
     {
+      "name": "Sri Lanka",
+      "code": 94,
+      "url": "assets/images/shriLanka.png",
+      "fields": [
+        {
+          "type": "text",
+          "placeHolder": "First Name",
+          "name": "firstName",
+          "value": "",
+          "required": true
+        },
+        {
+          "type": "text",
+          "placeHolder": "Last Name",
+          "name": "lastName",
+          "value": "",
+          "required": true
+        },
+        {
+          "type": "email",
+          "placeHolder": "Email",
+          "name": "email",
+          "value": "",
+          "required": false
+        },
+        {
+          "type": "number",
+          "placeHolder": "Phone Number",
+          "name": "phone",
+          "value": "",
+          "required": false
+        }
+      ]
+    },
+    {
       "name": "UK",
       "code": 44,
+      "url": "assets/images/uk.png",
       "fields": [
         {
           "type": "text",
@@ -103,7 +141,121 @@
       ]
     }
   ],
-  "receiverData": [
+  "forexQuote":[
+    {
+      "senderCountry":"india",
+      "senderCode":"INR",
+      "receiverCode":"USD",
+      "receiverCountry":"usa",
+      "forexValue":0.012
+    },
+    {
+      "senderCountry":"india",
+      "senderCode":"INR",
+      "receiverCode":"GBP",
+      "receiverCountry":"uk",
+      "forexValue":0.0095
+    },
+    {
+      "senderCountry":"india",
+      "senderCode":"INR",
+      "receiverCode":"LKR",
+      "receiverCountry":"sri lanka",
+      "forexValue": 3.95
+    },
+    {
+      "senderCountry":"usa",
+      "senderCode":"USD",
+      "receiverCode":"INR",
+      "receiverCountry":"india",
+      "forexValue":83.3348
+    },
+    {
+      "senderCountry":"usa",
+      "senderCode":"USD",
+      "receiverCode":"GBP",
+      "receiverCountry":"uk",
+      "forexValue":0.79
+    },
+    {
+      "senderCountry":"usa",
+      "senderCode":"USD",
+      "receiverCode":"LKR",
+      "receiverCountry":"sri lanka",
+      "forexValue":329.10
+    },
+    {
+      "senderCountry":"uk",
+      "senderCode":"GBP",
+      "receiverCode":"USD",
+      "receiverCountry":"usa",
+      "forexValue":1.26
+    },
+    {
+      "senderCountry":"uk",
+      "senderCode":"GBP",
+      "receiverCode":"INR",
+      "receiverCountry":"india",
+      "forexValue":105.257
+    },
+    {
+      "senderCountry":"uk",
+      "senderCode":"GBP",
+      "receiverCode":"LKR",
+      "receiverCountry":"sri lanka",
+      "forexValue": 415.80
+    },
+    {
+      "senderCountry":"sri lanka",
+      "senderCode":"LKR",
+      "receiverCode":"USD",
+      "receiverCountry":"usa",
+      "forexValue":0.003
+    },
+    {
+      "senderCountry":"sri lanka",
+      "senderCode":"LKR",
+      "receiverCode":"USD",
+      "receiverCountry":"uk",
+      "forexValue":0.0024
+    },
+    {
+      "senderCountry":"sri lanka",
+      "senderCode":"LKR",
+      "receiverCode":"USD",
+      "receiverCountry":"india",
+      "forexValue":0.25
+    },
+    {
+      "senderCountry":"sri lanka",
+      "senderCode":"LKR",
+      "receiverCode":"LKR",
+      "receiverCountry":"sri lanka",
+      "forexValue":1
+    },
+    {
+      "senderCountry":"india",
+      "senderCode":"INR",
+      "receiverCode":"INR",
+      "receiverCountry":"india",
+      "forexValue":1
+    },
+    {
+      "senderCountry":"usa",
+      "senderCode":"USD",
+      "receiverCode":"USD",
+      "receiverCountry":"usa",
+      "forexValue":1
+    },
+    {
+      "senderCountry":"uk",
+      "senderCode":"GBP",
+      "receiverCode":"GBP",
+      "receiverCountry":"uk",
+      "forexValue":1
+    }
+  ],
+  "receiverData":[
     {
       "country": "USA",
       "firstName": "jhon ",
@@ -119,6 +271,14 @@
       "email": "rani@abn.com",
       "phone": "2454756859",
       "id": 8
+    },
+    {
+      "country": "Sri Lanka",
+      "firstName": "Malinga",
+      "lastName": "K",
+      "email": "",
+      "phone": "",
+      "id": 9
     }
   ]
 }

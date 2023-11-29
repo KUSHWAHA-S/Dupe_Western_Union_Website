@@ -12,6 +12,9 @@ export class AddReceiverService {
   getCountryData() {
     return this.http.get('http://localhost:3000/countryData');
   }
+  getForexData() {
+    return this.http.get('http://localhost:3000/forexQuote');
+  }
   getCountryDataByCountry(id:string){
     return this.http.get('http://localhost:3000/countryData/India');
   }

@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AddReceiverComponent } from './add-receiver/add-receiver.component';
 import { EditReceiverComponent } from './edit-receiver/edit-receiver.component';
+import { SendMoneyComponent } from './send-money/send-money.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   // { path:"" ,redirectTo:"login"},
   { path:"addReceiver" ,canActivate:[AuthGuard], component:AddReceiverComponent},
   { path:"myReceiver" ,canActivate:[AuthGuard], component:MyReceiverComponent},
-  { path:"editReceiver" ,canActivate:[AuthGuard], component:EditReceiverComponent}
+  { path:"editReceiver" ,canActivate:[AuthGuard], component:EditReceiverComponent},
+  { path:"sendMoney" , component:SendMoneyComponent}
 ];
 
 @NgModule({
