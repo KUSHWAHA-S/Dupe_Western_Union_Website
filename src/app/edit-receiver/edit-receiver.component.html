@@ -10,7 +10,7 @@
       <input class="country-code" *ngIf="field.name=='phone'" disabled type="number" name="phone"
         [placeholder]="countryCode">
       <input [type]="field.type" [ngClass]="field.name=='phone'? 'country-input' : 'phone-input'"
-        [formControlName]="field.name" [placeholder]="field.value">
+        [formControlName]="field.name" [placeholder]="field.value?field.value:field.placeHolder">
       <div class="error" *ngIf="valid && field.required">{{errorMessage(field)}}</div>
       <div class="error" *ngIf="!field.required">(optional)</div>
     </div>

@@ -6,6 +6,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { AddReceiverComponent } from './add-receiver/add-receiver.component';
 import { EditReceiverComponent } from './edit-receiver/edit-receiver.component';
 import { SendMoneyComponent } from './send-money/send-money.component';
+import { ReceiverDetailsComponent } from './receiver-details/receiver-details.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path:"addReceiver" ,canActivate:[AuthGuard], component:AddReceiverComponent},
   { path:"myReceiver" ,canActivate:[AuthGuard], component:MyReceiverComponent},
   { path:"editReceiver" ,canActivate:[AuthGuard], component:EditReceiverComponent},
-  { path:"sendMoney" , component:SendMoneyComponent}
+  { path:"sendMoney" , component:SendMoneyComponent},
+  { path:"receiverDetails" ,canActivate:[AuthGuard], component:ReceiverDetailsComponent}
 ];
 
 @NgModule({

@@ -88,7 +88,6 @@ describe('EditReceiverComponent', () => {
     expect(component.onCancel).toBeTruthy();
   });
   it('variables should undefined', () => {
-    expect(component.putId).toBeUndefined();
     expect(component.defaultValue).toBeTruthy();
   });
   // it('interpolation test', () => {

@@ -275,16 +275,17 @@ hr {
 .payin-section>div>p {
     color: #fff;
 }
-.payin-section>div>div>img{
+.payin-section>div>div>img, .selected-tile .payout-images{
     color: #fff;
     -webkit-filter: invert(100%); /* Safari/Chrome */
     filter: invert(100%);
 }
-.nonselected-tiles:hover #child{
+.nonselected-tiles:hover div{
   border: 1px solid #fff;
+  /* background-color: pink; */
 }
 
-.payout-section-tiles>div>div {
+.nonselected-tiles div {
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -313,7 +314,12 @@ hr {
     width: 30px;
     height: 30px;
 }
-.payin-section>div>div {
+.nonselected-tiles:hover .payout-images{
+  color: #fff;
+  -webkit-filter: invert(100%); /* Safari/Chrome */
+  filter: invert(100%);
+}
+.payin-section>div>div, .selected-tile>div {
     width: 45px;
     height: 45px;
     border-radius: 50%;

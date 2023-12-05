@@ -107,6 +107,7 @@ export class SendMoneyComponent implements OnInit {
       localStorage.setItem("data", JSON.stringify(this.data));
       var d = localStorage.getItem("data");
       console.log(JSON.parse(d));
+      this.route.navigate(['/receiverDetails']);
     }
     else {
       alert("Please select payout method or country");

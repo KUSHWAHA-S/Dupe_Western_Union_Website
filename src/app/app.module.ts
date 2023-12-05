@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { EditReceiverComponent } from './edit-receiver/edit-receiver.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SendMoneyComponent } from './send-money/send-money.component';
+import { ReceiverDetailsComponent } from './receiver-details/receiver-details.component';
 
 
 
@@ -24,6 +25,7 @@ import { SendMoneyComponent } from './send-money/send-money.component';
     AddReceiverComponent,
     EditReceiverComponent,
     SendMoneyComponent,
+    ReceiverDetailsComponent,
   ],
   imports: [
     BrowserModule,

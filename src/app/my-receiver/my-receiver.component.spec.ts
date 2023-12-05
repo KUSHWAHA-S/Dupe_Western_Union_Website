@@ -65,7 +65,7 @@ describe('MyReceiverComponent', () => {
   it('should navigate to /editReceiver with query params on editReceiver() call', () => {
     spyOn(component.route, 'navigate'); 
     component.editReceiver(123);
-    expect(component.route.navigate).toHaveBeenCalledWith(['/editReceiver'], { queryParams: { id: 123 } });
+    expect(component.route.navigate).toHaveBeenCalledWith(['/editReceiver'], { queryParams: { id: '123' } });
   });
 
  

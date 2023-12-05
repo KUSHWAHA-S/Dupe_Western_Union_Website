@@ -1,0 +1,59 @@
+<div class="wu-receiver-container">
+  <h2>Receiver's Information</h2>
+
+  <!-- <input placeholder={{defaultValue.country}} disabled type="text" name="country"> -->
+  <form [formGroup]="dynamicForm" *ngIf="dynamicForm" (ngSubmit)="onSubmit()">
+    <div class="wu-receiver-personal-info">
+      <!-- <h5>Receiver's personal information</h5> -->
+      <div class="general-fields">
+        <div *ngFor="let field of countryData.fields">
+          <input class="country-code" *ngIf="field.name=='phone' && method!='wallet'" disabled type="number" name="phone"
+          [placeholder]="countryData.code">
+          <input [type]="field.type" *ngIf="!(field.name=='phone' && method=='wallet')"  [ngClass]="field.name=='phone'? 'country-input' : 'phone-input'"
+            [formControlName]="field.name" [placeholder]="field.value?field.value:field.placeHolder">
+          <!-- <div class="error" *ngIf="valid && field.required">{{errorMessage(field)}}</div>
+          <div class="error" *ngIf="!field.required">(optional)</div> -->
+        </div>
+      </div>
+
+      <div class="cash-fields" *ngIf="method=='cash'">
+        <div><input type="text" formControlName="streetAddress" placeholder="Street Address"></div>
+        <div><input type="text" formControlName="AddressLine2" placeholder="Address Line 2"></div>
+        <div><input type="text" formControlName="City" placeholder="City"></div>
+        <div><input type="text" formControlName="State" placeholder="State"></div>
+        <div><input type="text" formControlName="PostalCode" placeholder="Postal Code"></div>
+      </div>
+      <h6 *ngIf="method=='bank'">Receiver's bank account Information</h6>
+      <div class="bank-fields" *ngIf="method=='bank'">
+        <div>
+          <label>Bank Name</label>
+          <select formControlName="BankName">
+            <option *ngFor="let bank of bankOptions" [value]="bank">{{bank}}</option>
+          </select></div>
+        <div><input type="text" formControlName="AccountNumber" placeholder="Account Number"></div>
+        <div><input type="text" placeholder="Re-Enter Account Number"></div>
+      </div>
+      <h6 *ngIf="method=='wallet'">Receiver's wallet information</h6>
+      <div class="wallet-fields" *ngIf="method=='wallet'">
+        
+        <div>
+          <label>Wallet Service Provider</label>
+          <select formControlName="ServiceProvider">
+          <option *ngFor="let wallet of walletOptions" [value]="wallet">{{wallet}}</option>
+          <!-- <option [ngValue]="HDFC">HDFC</option>
+            <option [ngValue]="AXIS">AXIS</option> -->
+        </select></div>
+        <div>
+          <label>Country code</label>
+          <input class="country-code" disabled type="number" name="phone" [placeholder]="countryData.code"></div>
+        <div><input class="country-code" formControlName="WalletMobileNumber" type="number" name="phone"
+          placeholder="Wallet Mobile Number"></div>
+
+      </div>
+
+
+    </div>
+    <button type="submit">Save</button>
+  </form>
+  <button (click)="onCancel()">Cancel</button>
+</div>
