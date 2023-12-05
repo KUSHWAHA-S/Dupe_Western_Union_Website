@@ -1,0 +1,75 @@
+.wu-myReceiver {
+  margin: 100px auto;
+  width: 40%;
+  /* background-color: blue; */
+  line-height: 2.5;
+
+}
+
+.wu-myReceiver>h3 {
+  color: rgb(73, 73, 73);
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.wu-each-myReceiver {
+  margin-top: 20px;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  text-align: left;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px 0px rgb(188, 187, 187);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 2px;
+}
+
+.wu-myReceiver>button {
+  margin-top: 20px;
+  background-color: #045F86;
+  color: #fff;
+  padding: 10px 10px 15px 10px;
+  width: 100%;
+  border: none;
+  height: 55px;
+  border-radius: 4px;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+}
+
+.wu-each-myReceiver>i {
+  vertical-align: middle;
+  cursor: pointer;
+  color: #045F86;
+}
+
+.wu-each-myReceiver>p {
+  width: 70%;
+  margin: 0;
+  padding-left: 10px;
+  text-transform: capitalize;
+  color: rgb(84, 83, 83);
+}
+.wu-each-myReceiver>div {
+    /* vertical-align: middle; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    /* object-position: center; */
+
+  }
+  .wu-each-myReceiver>div>img {
+    width:160%;
+    /* height: 100%; */
+    /* border-radius: 10px; */
+    object-fit: fill;
+    object-position: center;
+    border-radius: 50%;
+  }

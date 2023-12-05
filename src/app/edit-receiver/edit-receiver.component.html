@@ -1,0 +1,41 @@
+<div class="wu-receiver-container">
+  <h2>{{defaultValue.firstName}} {{defaultValue.lastName}}</h2>
+  <p>For your safety, make sure you know your receiver</p>
+
+  <input placeholder={{defaultValue.country}} disabled type="text" name="country">
+  <form [formGroup]="dynamicForm" *ngIf="dynamicForm" (ngSubmit)="onSubmit()">
+    <div class="wu-receiver-personal-info">
+    <h5>Receiver's personal information</h5>
+    <div *ngFor="let field of dynamicFields">
+      <input class="country-code" *ngIf="field.name=='phone'" disabled type="number" name="phone"
+        [placeholder]="countryCode">
+      <input [type]="field.type" [ngClass]="field.name=='phone'? 'country-input' : 'phone-input'"
+        [formControlName]="field.name" [placeholder]="field.value?field.value:field.placeHolder">
+      <div class="error" *ngIf="valid && field.required">{{errorMessage(field)}}</div>
+      <div class="error" *ngIf="!field.required">(optional)</div>
+    </div>
+  </div>
+    <button type="submit">Save</button>
+  </form>
+  <button (click)="onCancel()">Cancel</button>
+</div>
+
+
+
+
+<!-- <p>For your safety, make sure you know your receiver</p> -->
+<!-- <select ngModel name="country" id="country">
+      <option value="india">India</option>
+      <option value="usa">United States of America</option>
+      <option value="uk">United Kingdom</option>
+    </select> -->
+<!-- <input placeholder={{defaultValue.country}}  disabled type="text" name="country" > -->
+<!-- <div class="wu-receiver-personal-info">
+      <h5>Receiver's personal information</h5>
+      <input #firstName="ngModel" [(ngModel)]="defaultValue.firstName" required  type="text" name="firstName" placeholder="Receiver's firstName">
+      <div >gfgh</div>
+      <div class="error" *ngIf="firstName.invalid && firstName.dirty">{{errorMessage(field.required)}}</div>
+      <input #lastName="ngModel" [(ngModel)]="defaultValue.lastName" type="text" name="lastName" placeholder="Receiver's lastName">
+      <input #email="ngModel" [(ngModel)]="defaultValue.email" type="text" name="email" placeholder="Receiver's email">
+      <input #phone="ngModel" [(ngModel)]="defaultValue.phone" type="text" name="phone" placeholder="Receiver's phone">
+    </div> -->

@@ -1,0 +1,19 @@
+<!-- <nav style="background-color: aquamarine;">
+  Western Union
+  <a routerLink="/send">Send Money</a>
+  <a [hidden]="changeHeader" routerLink="/track">Track Transfer</a>
+</nav> -->
+<header>
+  <div class="wu-header-logo">
+    <img src="https://www.westernunion.com/content/dam/wu/logo/logo.wu.big.svg" alt="wu-logo">
+  </div>
+  <ul class="wu-header-content">
+    <li><a  routerLink="/sendMoney">Send Money</a></li>
+    <!-- <li><a  routerLink="/receiverDetails">Receiver Details</a></li> -->
+    <li><a *ngIf="changeHeader" routerLink="/myReceiver">My Receivers</a></li>
+    <li><a *ngIf="changeHeader" routerLink="/addReceiver">Add Receivers</a></li>
+    <li  >
+        <a *ngIf="!changeHeaderLogOut" (click)="logOut()" style="cursor: pointer;">Log out</a>
+    </li>
+  </ul>
+</header>

@@ -1,0 +1,10 @@
+{
+    "india": [{
+        "firstName": "data.firstName",
+      "lastName":" data.lastName",
+      "email": "data.email"
+    }
+    ],
+    "usa": [],
+    "uk": []
+}
