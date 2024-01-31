@@ -13,6 +13,7 @@ import { EditReceiverComponent } from './edit-receiver/edit-receiver.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SendMoneyComponent } from './send-money/send-money.component';
 import { ReceiverDetailsComponent } from './receiver-details/receiver-details.component';
+import { SummaryComponent } from './summary/summary.component';
 
 
 
@@ -26,6 +27,7 @@ import { ReceiverDetailsComponent } from './receiver-details/receiver-details.co
     EditReceiverComponent,
     SendMoneyComponent,
     ReceiverDetailsComponent,
+    SummaryComponent,
   ],
   imports: [
     BrowserModule,

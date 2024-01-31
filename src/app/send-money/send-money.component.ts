@@ -24,7 +24,9 @@ export class SendMoneyComponent implements OnInit {
   selectedPayout: string;
   data: any;
 
-  constructor(private route: Router, private receiver: AddReceiverService) { }
+  constructor(private route: Router, private receiver: AddReceiverService) {
+
+  }
 
   ngOnInit(): void {
     this.receiver.getCountryData().subscribe(
@@ -48,6 +50,8 @@ export class SendMoneyComponent implements OnInit {
       }
     );
   }
+
+
   payoutMethod(method: string) {
     this.selectedPayout = method;
     console.log(method);
@@ -63,16 +67,17 @@ export class SendMoneyComponent implements OnInit {
   }
   countryChange(country: any) {
     this.showCountry = false;
-    this.countrySelected = country.name;
-    this.urlSelected = country.url;
+    this.countrySelected = country?.name;
+    this.urlSelected = country?.url;
     if (this.countrySelected) {
 
       this.forexSelected = this.forexData.filter((c: any) => {
         return c.receiverCountry.toLowerCase() == this.countrySelected.toLowerCase() && c.senderCountry.toLowerCase() == "usa";
       });
       console.log(this.forexSelected);
+      if(this.forexSelected){
       this.forexValue = this.forexSelected[0].forexValue;
-      this.receiverCode = this.forexSelected[0].receiverCode;
+      this.receiverCode = this.forexSelected[0].receiverCode;}
       if (this.sendAmount) {
         this.receiveAmount = this.sendAmount * this.forexValue;
       }
@@ -115,6 +120,6 @@ export class SendMoneyComponent implements OnInit {
   }
   ngOnChange(): void {
     this.showCountry = true;
-    console.log("trfk");
+    // console.log("trfk");
   }
 }

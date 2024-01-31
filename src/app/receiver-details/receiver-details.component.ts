@@ -84,7 +84,20 @@ export class ReceiverDetailsComponent implements OnInit {
   }
 
   onSubmit(){
-    localStorage.removeItem("data");
+    
+    console.log(this.dynamicForm.value);
+    this.receiver.postReceiverData(this.dynamicForm.value)
+        .subscribe(
+          (res: any) => {
+            console.log(res);
+            localStorage.setItem("receiver-data", JSON.stringify({...this.sendMoneyData,...res}));
+            // localStorage.removeItem("data");
+            this.route.navigate(['/review']);
+          },
+          (err: Error) => {
+            console.log(err);
+          }
+        );
   }
 
   ngDoCheck(): void {

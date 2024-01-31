@@ -1,0 +1,155 @@
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0;
+  width: 100%;
+}
+
+h6 {
+  margin: 5px 0 0 0;
+}
+
+.receipt-box p {
+  margin: 5px 0 0 0;
+}
+
+.receipt-box>div:nth-child(5),
+.receipt-box>div:nth-child(6) {
+  border-top: 1px solid grey;
+}
+
+.receipt-box>div:nth-child(3) {
+  background-color: #c9c6c6;
+}
+
+.margin-50 {
+  margin: 50px 0 5px 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.margin-30 {
+  margin-bottom: 67px;
+}
+
+.text-align {
+  text-align: right;
+}
+
+.review-page {
+  width: 70%;
+  margin: 5% auto;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 30px;
+  align-items: flex-start;
+
+}
+
+.name-p {
+  font-weight: 400;
+}
+
+.review-page h3 {
+  color: #232323;
+  width: 100%;
+  text-align: left;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 1.1;
+
+  margin: 25px 0 15px 0;
+}
+
+.review-page>div {
+  width: 48%;
+}
+
+.review-page>div:nth-child(1) {
+  align-items: flex-start;
+  min-height: 100%;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+
+.small-para {
+  font-size: 10px;
+  /* margin-bottom: 5px; */
+}
+
+.normal-para {
+  font-size: 13px;
+}
+
+.images-size {
+  width: 30px;
+  height: 28px;
+}
+
+.print-button {
+  border: none;
+  color: #232323;
+  text-align: right;
+  background-color: rgba(255, 0, 0, 0);
+  margin-bottom: 25px;
+}
+
+.second-column>p:nth-child(4) {
+  margin-bottom: 5px;
+}
+
+.payout-method>p {
+  width: 90%;
+  font-size: 15px;
+  font-weight: 200;
+  text-transform: capitalize;
+
+}
+
+.country-name {
+  margin-top: 5px;
+  align-items: center;
+}
+
+.country-name>h6 {
+  margin: 0 0 0 10px;
+  font-size: 15px;
+  font-weight: 400;
+  width: 90%;
+
+}
+
+.payout-method>div {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgb(113, 113, 113);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payout-images {
+  width: 15px;
+  height: 15px;
+}
+
+.payout-method {
+  width: 100%;
+  margin-top: 5px;
+}

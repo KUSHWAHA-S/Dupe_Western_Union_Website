@@ -90,13 +90,13 @@ describe('EditReceiverComponent', () => {
   it('variables should undefined', () => {
     expect(component.defaultValue).toBeTruthy();
   });
-  // it('interpolation test', () => {
-  //   const defaultValue: HTMLElement = fixture.debugElement.nativeElement.querySelector('h2');
-  //   fixture.detectChanges(); 
-  //   expect(defaultValue.innerHTML).toEqual(component.defaultValue);   
-  // });
+  it('interpolation test', () => {
+    const defaultValue: HTMLElement = fixture.debugElement.nativeElement.querySelector('h2');
+    fixture.detectChanges(); 
+    expect(defaultValue.innerHTML).toEqual(component.defaultValue);   
+  });
 
-  // ---if you put get method in service = TestBed.get(AddReceiverService)----
+ 
   // it('test if service instace is getting called by get method', () => {
   //   expect(service instanceof (AddReceiverService)).toBeTruthy();
   // });

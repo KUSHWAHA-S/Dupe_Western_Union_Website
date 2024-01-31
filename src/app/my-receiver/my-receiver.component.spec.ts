@@ -56,9 +56,7 @@ describe('MyReceiverComponent', () => {
 
   it('should navigate to /addReceiver on addReceiver() call', () => {
     spyOn(component.route, 'navigate');
- 
     component.addReceiver();
- 
     expect(component.route.navigate).toHaveBeenCalledWith(['/addReceiver']);
   });
 

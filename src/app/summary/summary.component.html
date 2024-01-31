@@ -1,0 +1,46 @@
+<div class="flex-row review-page">
+  <div class="flex-col">
+    <h3 >Review and Confirm</h3>
+    <p class="small-para">This is not a receipt</p>
+    <p class="small-para margin-50">Sending Details</p>
+    <hr>
+    <div class="flex-row country-name">
+      <img class="images-size"  src="assets/images/usa.png" alt="">
+      <h6 class="name-p">Shalini</h6>
+    </div>
+    <div class="flex-row payout-method">
+      <div><img src="assets/images/cash-on-delivery.png" class="payout-images" alt=""></div>
+      <p>Cash</p>
+     
+    </div>
+    <p class="small-para no-margin">EXPECTED FOREIGN PAYOUT COUNTRY LOCATION</p>
+    <hr>
+    <h6 class="name-p">{{receiverData.country}}</h6>
+  </div>
+  <div class="flex-col second-column">
+    <button class="print-button">Print</button>
+    <p class="text-align small-para no-margin">Date of transaction</p>
+    <p class="text-align small-para margin-30">{{todayDate}}</p>
+    <p class="small-para ">Receiving Details</p>
+    <hr>
+    <div class="flex-row country-name">
+      <img class="images-size" src="assets/images/india.png" alt="">
+      <h6 class="name-p">{{receiverData.firstName}} {{receiverData.lastName}}</h6>
+    </div>
+    <div class="flex-row payout-method">
+      <div><img src="assets/images/wallet.png" class="payout-images" alt=""></div>
+      <p>{{receiverData.method}}</p>
+    </div>
+    <div class="flex-row"><p class="small-para no-margin">SUMMARY</p></div>
+    <hr>
+    <div class="flex-col receipt-box">
+      <div class="flex-row"><p class="normal-para">Transfer amount</p><p>{{receiverData.sendAmount}} USD</p></div>
+      <div class="flex-row"><p class="normal-para">Transfer fee</p><p>+3.24 USD</p></div>
+      <div class="flex-row "><p class="normal-para">Total</p><p>{{total}} USD</p></div>
+      <div class="flex-row"><p class="normal-para">Exchange rate</p><p>83.3348 INR</p></div>
+      <div class="flex-row"><p class="normal-para">Transfer amount</p><p>{{receiverData.receiveAmount}} INR</p></div>
+      <div class="flex-row"><p class="normal-para">Total to Final Receiver</p><p>{{receiverData.receiveAmount}} INR</p></div>
+    </div>
+    
+  </div>
+</div>
